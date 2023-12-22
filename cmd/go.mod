@@ -1,5 +1,3 @@
-module github.com/teivah/aoc/stats
+module github.com/colehpage/advent-of-code/stats
 
-go 1.21.4
-
-require github.com/teivah/advent-of-code v1.9.1 // indirect
+go 1.21.5
