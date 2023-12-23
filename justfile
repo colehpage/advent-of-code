@@ -24,7 +24,7 @@ gen LANGUAGE YEAR DAY:
     sed -i -e 's/go 1.21.4/go 1.21/' go.mod
     rm go.mod-e
 
-    cd ../..
+    cd ../../..
   fi
 
   if [ "{{LANGUAGE}}" = "rust" ]; then
@@ -39,8 +39,9 @@ gen LANGUAGE YEAR DAY:
   ' README.md
   fi
 
-  # comment out to automatically open the newly created folder/day
-  # code {{YEAR}}/{{LANGUAGE}}/{{DAY}}
+  echo "successfully generated {{YEAR}}/{{LANGUAGE}}/{{DAY}} directory and imported templates"
+  echo "opening directory in vscode now"
+  code {{YEAR}}/{{LANGUAGE}}/{{DAY}}
 
 stats:
   go run cmd/stats.go
