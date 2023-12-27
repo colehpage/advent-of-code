@@ -42,36 +42,10 @@ which will kick off a day in any language and create appropriate directories if 
 ### Setup TypeScript workspace
 
 Install latest stable `node` and `pnpm`
-* [Day 1](https://adventofcode.com/2023/day/1): [TS](2023/day1-typescript/main.ts)
-* [Day 1](https://adventofcode.com/2023/day/1): [TS](2023/day1-typescript/main.ts)
-* [Day 1](https://adventofcode.com/2023/day/1): [TS](2023/day1-typescript/main.ts)
-* [Day 1](https://adventofcode.com/2023/day/1): [TS](2023/day1-typescript/main.ts)
-* [Day 1](https://adventofcode.com/2023/day/1): [TS](2023/day1-typescript/main.ts)
-* [Day 1](https://adventofcode.com/2023/day/1): [TS](2023/day1-typescript/main.ts)
-* [Day 1](https://adventofcode.com/2023/day/1): [TS](2023/day1-typescript/main.ts)
-* [Day 1](https://adventofcode.com/2023/day/1): [TS](2023/day1-typescript/main.ts)
-* [Day 1](https://adventofcode.com/2023/day/1): [TS](2023/day1-typescript/main.ts)
-* [Day 1](https://adventofcode.com/2023/day/1): [TS](2023/day1-typescript/main.ts)
-* [Day 1](https://adventofcode.com/2023/day/1): [TS](2023/day1-typescript/main.ts)
-* [Day 1](https://adventofcode.com/2023/day/1): [TS](2023/day1-typescript/main.ts)
-* [Day 1](https://adventofcode.com/2023/day/1): [TS](2023/day1-typescript/main.ts)
-* [Day 1](https://adventofcode.com/2023/day/1): [TS](2023/day1-typescript/main.ts)
-* [Day 1](https://adventofcode.com/2023/day/1): [TS](2023/day1-typescript/main.ts)
-* [Day 1](https://adventofcode.com/2023/day/1): [TS](2023/day1-typescript/main.ts)
-* [Day 1](https://adventofcode.com/2023/day/1): [TS](2023/day1-typescript/main.ts)
-* [Day 1](https://adventofcode.com/2023/day/1): [TS](2023/day1-typescript/main.ts)
-* [Day 1](https://adventofcode.com/2023/day/1): [TS](2023/day1-typescript/main.ts)
-* [Day 1](https://adventofcode.com/2023/day/1): [TS](2023/day1-typescript/main.ts)
-* [Day 1](https://adventofcode.com/2023/day/1): [TS](2023/day1-typescript/main.ts)
-* [Day 1](https://adventofcode.com/2023/day/1): [TS](2023/day1-typescript/main.py)
-* [Day 1](https://adventofcode.com/2023/day/1): [TS](2023/day1-typescript/main.py)
-* [Day 1](https://adventofcode.com/2023/day/1): [TS](2023/day1-typescript/main.py)
 
 ```sh
 pnpm install
 ```
-
-- [Day 1](https://adventofcode.com/2023/day/1): [TS](typescript/2023/day1-typescript/main.ts)
 
 ### Running individual TypeScript solutions
 
