@@ -1,0 +1,7 @@
+{
+	"extends": ["./.config/typedoc.base.json"],
+	"entryPoints": ["."],
+	"exclude": ["apps/*"],
+	"out": "./.cache/typedoc",
+	"entryPointStrategy": "packages"
+}

@@ -1,0 +1,23 @@
+{
+  "ignores": [
+    "@lcov-viewer/cli",
+    "@sveltejs/*",
+    "@types/eslint",
+    "@types/node",
+    "@types/yargs",
+    "@typescript-eslint/*",
+    "@vitest/coverage-v8",
+    "depcheck",
+    "eslint*",
+    "prettier*",
+    "svelte",
+    "svelte-check",
+    "svelte-preprocess",
+    "ts-node",
+    "turbo-ignore",
+    "typedoc",
+    "typescript",
+    "vitest"
+  ],
+  "skip-missing": true
+}

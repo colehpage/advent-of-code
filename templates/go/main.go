@@ -5,7 +5,7 @@ import (
 	"io"
 )
 
-func fs1(input io.Reader) int {
+func p1(input io.Reader) int {
 	scanner := bufio.NewScanner(input)
 	for scanner.Scan() {
 		line := scanner.Text()
@@ -15,7 +15,7 @@ func fs1(input io.Reader) int {
 	return 42
 }
 
-func fs2(input io.Reader) int {
+func p2(input io.Reader) int {
 	scanner := bufio.NewScanner(input)
 	for scanner.Scan() {
 		line := scanner.Text()

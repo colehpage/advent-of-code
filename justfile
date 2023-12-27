@@ -1,23 +1,19 @@
 gen LANGUAGE YEAR DAY:
   #!/bin/bash
-  # [[ -s "$GVM_ROOT/scripts/gvm" ]] && source "$GVM_ROOT/scripts/gvm"
-  # gvm use go1.21.4
+  mkdir -p {{LANGUAGE}}/{{YEAR}}/{{DAY}}
 
-  mkdir -p {{YEAR}}/{{LANGUAGE}}/{{DAY}}
-
-  cp -R templates/{{LANGUAGE}}/ {{YEAR}}/{{LANGUAGE}}/{{DAY}}
-  curl --cookie "session=$ADVENT_OF_CODE_COOKIE" https://adventofcode.com/{{YEAR}}/day/{{DAY}}/input -o {{YEAR}}/{{LANGUAGE}}/{{DAY}}/input.txt
-  perl -i -pe 'chomp if eof' {{YEAR}}/{{LANGUAGE}}/{{DAY}}/input.txt
+  cp -R templates/{{LANGUAGE}}/ {{LANGUAGE}}/{{YEAR}}/{{DAY}}
+  curl --cookie "session=$ADVENT_OF_CODE_COOKIE" https://adventofcode.com/{{YEAR}}/day/{{DAY}}/input -o {{LANGUAGE}}/{{YEAR}}/{{DAY}}/input.txt
+  perl -i -pe 'chomp if eof' {{LANGUAGE}}/{{YEAR}}/{{DAY}}/input.txt
   if [ "{{LANGUAGE}}" = "go" ]; then
     sed -i '' '45i\
   * [Day {{DAY}}](https://adventofcode.com/{{YEAR}}/day/{{DAY}}): [Go]({{YEAR}}/day{{DAY}}-go/main.go)\
   ' README.md
 
-    cd {{YEAR}}/{{LANGUAGE}}/{{DAY}}
+    cd {{LANGUAGE}}/{{YEAR}}/{{DAY}}
     go mod init day{{YEAR}}-{{DAY}}
     go mod tidy
     go get github.com/stretchr/testify
-    go get github.com/teivah/advent-of-code@v1.9.1
     go get golang.org/x/exp
 
     # Temporary workaround as the Go version is generated with 3 digits for some reason
@@ -39,9 +35,23 @@ gen LANGUAGE YEAR DAY:
   ' README.md
   fi
 
-  echo "successfully generated {{YEAR}}/{{LANGUAGE}}/{{DAY}} directory and imported templates"
+  if [ "{{LANGUAGE}}" = "typescript" ]; then
+    sed -i '' '45i\
+  * [Day {{DAY}}](https://adventofcode.com/{{YEAR}}/day/{{DAY}}): [TS]({{YEAR}}/day{{DAY}}-typescript/main.ts)\
+  ' README.md
+
+    cd {{LANGUAGE}}/{{YEAR}}/{{DAY}}
+    python3 scripts/readme-script.py --y {{YEAR}} --d {{DAY}}
+    python3 scripts/package-script.py --y {{YEAR}} --d {{DAY}}
+    pnpm install
+    prettier --write ./package.json
+    rm -rf scripts
+    cd ../../..
+  fi
+
+  echo "successfully generated {{LANGUAGE}}/{{YEAR}}/{{DAY}} directory and imported templates"
   echo "opening directory in vscode now"
-  code {{YEAR}}/{{LANGUAGE}}/{{DAY}}
+  code {{LANGUAGE}}/{{YEAR}}/{{DAY}}
 
 stats:
   go run cmd/stats.go
@@ -49,3 +59,4 @@ stats:
   echo "Go lines without tests: $(find . -name '*.go' ! -name '*_test.go' -exec cat {} + | wc -l)"
   echo "Rust lines: $(find . -name '*.rs' ! -name '*_test.go' -exec cat {} + | wc -l)"
   echo "Python lines: $(find . -name '*.py' ! -name '*_test.go' -exec cat {} + | wc -l)"
+  echo "TypeScript lines: $(find . -name '*.ts' ! -name '*_test.go' -exec cat {} + | wc -l)"

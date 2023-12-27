@@ -25,6 +25,7 @@ func run() error {
 		"Go":      0,
 		"Rust":    0,
 		"Python":  0,
+		"TS": 0,
 	}
 	scanner := bufio.NewScanner(f)
 	for scanner.Scan() {

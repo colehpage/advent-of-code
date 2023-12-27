@@ -2,8 +2,8 @@ from builtins import print
 from builtins import str
 
 
-def fs1(content: str):
-  lines = content.splitlines()
+def p1(input: str):
+  lines = input.splitlines()
 
   for line in lines:
     print(line)
@@ -11,8 +11,8 @@ def fs1(content: str):
   return 42
 
 
-def fs2(content: str):
-  lines = content.splitlines()
+def p2(input: str):
+  lines = input.splitlines()
 
   for line in lines:
     print(line)

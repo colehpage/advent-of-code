@@ -1,0 +1,12 @@
+packages:
+    - 'typescript/libs/*'
+    - 'typescript/2015/*'
+    - 'typescript/2016/*'
+    - 'typescript/2017/*'
+    - 'typescript/2018/*'
+    - 'typescript/2019/*'
+    - 'typescript/2020/*'
+    - 'typescript/2021/*'
+    - 'typescript/2022/*'
+    - 'typescript/2023/*'
+link-workspace-packages: 'deep'

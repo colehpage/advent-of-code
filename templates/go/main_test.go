@@ -8,26 +8,26 @@ import (
 	"github.com/stretchr/testify/require"
 )
 
-func TestFs1Test(t *testing.T) {
+func TestP1Test(t *testing.T) {
 	f, err := os.Open("test.txt")
 	require.NoError(t, err)
-	assert.Equal(t, 42, fs1(f))
+	assert.Equal(t, 42, p1(f))
 }
 
-func TestFs1Input(t *testing.T) {
+func TestP1Input(t *testing.T) {
 	f, err := os.Open("input.txt")
 	require.NoError(t, err)
-	assert.Equal(t, 42, fs1(f))
+	assert.Equal(t, 42, p1(f))
 }
 
-func TestFs2Test(t *testing.T) {
+func TestP2Test(t *testing.T) {
 	f, err := os.Open("test.txt")
 	require.NoError(t, err)
-	assert.Equal(t, 42, fs2(f))
+	assert.Equal(t, 42, p2(f))
 }
 
-func TestFs2Input(t *testing.T) {
+func TestP2Input(t *testing.T) {
 	f, err := os.Open("input.txt")
 	require.NoError(t, err)
-	assert.Equal(t, 42, fs2(f))
+	assert.Equal(t, 42, p2(f))
 }
