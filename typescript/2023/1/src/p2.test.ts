@@ -1,10 +1,10 @@
 import { describe, expect, it } from 'vitest';
-import { run } from './p1.js';
+import { run } from './p2.js';
 
-describe('p1', () => {
+describe('2023 01 p2', () => {
 	describe('the input', () => {
 		it('should solve the input', async () => {
-			expect(await run()).toEqual(0);
+			expect(await run()).toEqual(54_473);
 		});
 	});
 });

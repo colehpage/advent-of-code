@@ -62,6 +62,7 @@ Install latest stable `node` and `pnpm`
 * [Day 1](https://adventofcode.com/2023/day/1): [TS](2023/day1-typescript/main.ts)
 * [Day 1](https://adventofcode.com/2023/day/1): [TS](2023/day1-typescript/main.ts)
 * [Day 1](https://adventofcode.com/2023/day/1): [TS](2023/day1-typescript/main.ts)
+* [Day 1](https://adventofcode.com/2023/day/1): [TS](2023/day1-typescript/main.ts)
 * [Day 1](https://adventofcode.com/2023/day/1): [TS](2023/day1-typescript/main.py)
 * [Day 1](https://adventofcode.com/2023/day/1): [TS](2023/day1-typescript/main.py)
 * [Day 1](https://adventofcode.com/2023/day/1): [TS](2023/day1-typescript/main.py)
