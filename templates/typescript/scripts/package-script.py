@@ -2,6 +2,8 @@ import json
 import argparse
 
 # Create JSON data
+
+
 def create_package_json_file(year, day):
     data = {
         "name": f"@colehpage/advent-of-code-{year}-{day}",
@@ -46,8 +48,8 @@ def create_package_json_file(year, day):
             "build-lib_": "vite build",
             "format": f"turbo run format_ --concurrency 16 --cache-dir .cache/turbo --filter @colehpage/advent-of-code-{year}-{day}",
             "format_": "prettier --cache-location .cache/prettier --plugin prettier-plugin-svelte --plugin prettier-plugin-tailwindcss --write .",
-            "p1": "RUN=1 NODE_NO_WARNINGS=1 node --loader ts-node/esm src/p1.ts",
-            "p2": "RUN=1 NODE_NO_WARNINGS=1 node --loader ts-node/esm src/p2.ts"
+            "p1": "tsx src/p1.ts",
+            "p2": "tsx src/p2.ts"
         },
         "exports": {
             "./bench": {
@@ -83,7 +85,8 @@ def create_package_json_file(year, day):
     # Write JSON data to a file
     with open("package.json", "w") as json_file:
         json.dump(data, json_file)
-        
+
+
 # Create argument parser
 parser = argparse.ArgumentParser()
 parser.add_argument("-y", "--year", type=int, help="Year argument")
