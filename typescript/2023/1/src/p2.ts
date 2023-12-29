@@ -1,9 +1,4 @@
-import { readFileSync } from 'fs';
-
-export function getTextFromFile(filePath: string): string {
-	const text = readFileSync(filePath, 'utf-8');
-	return text;
-}
+import { task } from '../../../lib/src/platform';
 
 const numbers = {
 	one: '1',
@@ -28,7 +23,7 @@ const numbers = {
 
 const numbersAsKeys = Object.keys(numbers) as (keyof typeof numbers)[];
 
-export const p2 = async (input: string) => {
+export const p2 = (input: string) => {
 	return input
 		.split('\n')
 		.map((line) => {
@@ -66,11 +61,8 @@ export const p2 = async (input: string) => {
 		.reduce((acc, curr) => acc + curr, 0);
 };
 
-export const run = async () => {
-	const input = getTextFromFile('./input.txt');
-	const result = await p2(input);
-	console.log(result);
-	return result;
-};
-
-run();
+await task(p2, {
+	year: 2023,
+	day: 1,
+	part: 2,
+});

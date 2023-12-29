@@ -36,13 +36,21 @@ gen LANGUAGE YEAR DAY:
   fi
 
   if [ "{{LANGUAGE}}" = "typescript" ]; then
-    sed -i '' '45i\
-  * [Day {{DAY}}](https://adventofcode.com/{{YEAR}}/day/{{DAY}}): [TS]({{YEAR}}/day{{DAY}}-typescript/main.ts)\
-  ' README.md
-
     cd {{LANGUAGE}}/{{YEAR}}/{{DAY}}
+
     python3 scripts/readme-script.py --y {{YEAR}} --d {{DAY}}
     python3 scripts/package-script.py --y {{YEAR}} --d {{DAY}}
+
+    sed -i '' 's/<<year>>/{{YEAR}}/g' src/p1.ts
+    sed -i '' 's/<<day>>/{{DAY}}/g' src/p1.ts
+    sed -i '' 's/<<year>>/{{YEAR}}/g' src/p1.test.ts
+    sed -i '' 's/<<day>>/{{DAY}}/g' src/p1.test.ts
+
+    sed -i '' 's/<<year>>/{{YEAR}}/g' src/p2.ts
+    sed -i '' 's/<<day>>/{{DAY}}/g' src/p2.ts
+    sed -i '' 's/<<year>>/{{YEAR}}/g' src/p2.test.ts
+    sed -i '' 's/<<day>>/{{DAY}}/g' src/p2.test.ts
+    
     pnpm install
     prettier --write ./package.json
     rm -rf scripts

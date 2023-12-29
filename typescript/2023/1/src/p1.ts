@@ -1,20 +1,13 @@
-import { readFileSync } from 'fs';
+import { task } from '../../../lib/src/platform/index.js';
 
-export function getTextFromFile(filePath: string): string {
-	const text = readFileSync(filePath, 'utf-8');
-	return text;
-}
-
-export const p1 = async (input: string) => {
+export const p1 = (input: string) => {
 	return input
 		.split('\n')
 		.map((line) => {
 			let firstDigit: string | undefined;
 			let lastDigit: string | undefined;
 			for (let i = 0; i < line.length; i++) {
-				// eslint-disable-next-line @typescript-eslint/no-non-null-assertion
 				const maybeFirstDigit = line[i]!;
-				// eslint-disable-next-line @typescript-eslint/no-non-null-assertion
 				const maybeLastDigit = line[line.length - i - 1]!;
 
 				if (firstDigit === undefined && /\d/.test(maybeFirstDigit)) {
@@ -35,11 +28,8 @@ export const p1 = async (input: string) => {
 		.reduce((acc, curr) => acc + curr, 0);
 };
 
-export const run = async () => {
-	const input = await getTextFromFile('./input.txt');
-	const result = await p1(input);
-	console.log(result);
-	return result;
-};
-
-run();
+await task(p1, {
+	year: 2023,
+	day: 1,
+	part: 1,
+});

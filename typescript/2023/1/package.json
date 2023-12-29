@@ -41,8 +41,8 @@
 		"build-lib_": "vite build",
 		"format": "turbo run format_ --concurrency 16 --cache-dir .cache/turbo --filter @colehpage/advent-of-code-2023-1",
 		"format_": "prettier --cache-location .cache/prettier --plugin prettier-plugin-svelte --plugin prettier-plugin-tailwindcss --write .",
-		"p1": "RUN=1 NODE_NO_WARNINGS=1 node --loader ts-node/esm src/p1.ts",
-		"p2": "RUN=1 NODE_NO_WARNINGS=1 node --loader ts-node/esm src/p2.ts"
+		"p1": "tsx src/p1.ts",
+		"p2": "tsx src/p2.ts"
 	},
 	"exports": {
 		"./bench": {
@@ -67,8 +67,8 @@
 	},
 	"devDependencies": {
 		"@types/node": "^20.10.5",
-		"ts-node": "^10.9.2",
 		"benny": "^3.7.1",
+		"ts-node": "^10.9.2",
 		"typescript": "^5.3.3",
 		"vite": "^5.0.10",
 		"vitest": "^1.1.0"

@@ -40,7 +40,15 @@
 		"verbatimModuleSyntax": true,
 		"incremental": true
 	},
-	"include": ["*", ".*", "*.json", "**/*.json", "**/*.ts", "**/*.d.ts"],
+	"include": [
+		"*",
+		".*",
+		"*.json",
+		"**/*.json",
+		"**/*.ts",
+		"**/*.d.ts",
+		"templates/typescript/scripts/p1-script.ts"
+	],
 	"exclude": [
 		"node_modules",
 		"dist",
@@ -53,7 +61,6 @@
 		"apps",
 		"libs",
 		"fixtures",
-		"solutions",
 		"*.cjs"
 	]
 }

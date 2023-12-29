@@ -1,10 +1,12 @@
 import { describe, expect, it } from 'vitest';
-import { run } from './p1.js';
+import { loadTaskResources } from '../../../lib/src/platform';
+import { p1 } from './p1.js';
 
-describe('p1', () => {
+describe('<<year>> <<day>> p1', () => {
 	describe('the input', () => {
 		it('should solve the input', async () => {
-			expect(await run()).toEqual(0);
+			const { input } = await loadTaskResources({ year: <<year>>, day: <<day>>, part: 1 });
+			expect(p1(input)).toEqual(0);
 		});
 	});
 });

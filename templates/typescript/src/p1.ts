@@ -1,11 +1,6 @@
-import { readFileSync } from 'fs';
+import { task } from '../../../lib/src/platform';
 
-export function getTextFromFile(filePath: string): string {
-	const text = readFileSync(filePath, 'utf-8');
-	return text;
-}
-
-export const p1 = async (input: string) => {
+export const p1 = (input: string) => {
 	const lines = input.split('\n');
 
 	lines.forEach((line) => {
@@ -15,11 +10,8 @@ export const p1 = async (input: string) => {
 	return 42;
 };
 
-export const run = async () => {
-	const input = await getTextFromFile('./input.txt');
-	const result = await p1(input);
-	console.log(result);
-	return result;
-};
-
-run();
+await task(p1, {
+	year: <<year>>,
+	day: <<day>>,
+    part: 1
+});

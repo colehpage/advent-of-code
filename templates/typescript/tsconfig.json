@@ -51,7 +51,8 @@
 		".*.json",
 		"**/*.json",
 		"**/*.ts",
-		"**/*.d.ts"
+		"**/*.d.ts",
+		"scripts/p1-script.ts"
 	],
 	"exclude": [
 		"node_modules",
