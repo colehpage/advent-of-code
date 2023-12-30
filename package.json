@@ -53,6 +53,7 @@
 		"@typescript-eslint/eslint-plugin": "^6.16.0",
 		"@typescript-eslint/parser": "^6.16.0",
 		"@vitest/coverage-v8": "^1.1.0",
+		"arktype": "1.0.28-alpha",
 		"depcheck": "^1.4.7",
 		"eslint": "^8.56.0",
 		"kolorist": "^1.8.0",
