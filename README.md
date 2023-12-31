@@ -29,15 +29,15 @@ which will kick off a day in any language and create appropriate directories if 
 
 ## [Typescript](./ts)
 
-[![2023 TypeScript Progress](https://img.shields.io/endpoint?url=https://raw.githubusercontent.com/colehpage/advent-of-code/master/.github/badges/typescript/2023.json)](/typescript/2023/)
-[![2022 TypeScript Progress](https://img.shields.io/endpoint?url=https://raw.githubusercontent.com/colehpage/advent-of-code/master/.github/badges/typescript/2022.json)](/typescript/2022/)
-[![2021 TypeScript Progress](https://img.shields.io/endpoint?url=https://raw.githubusercontent.com/colehpage/advent-of-code/master/.github/badges/typescript/2021.json)](/typescript/2021/)
-[![2020 TypeScript Progress](https://img.shields.io/endpoint?url=https://raw.githubusercontent.com/colehpage/advent-of-code/master/.github/badges/typescript/2020.json)](/typescript/2020/)
-[![2019 TypeScript Progress](https://img.shields.io/endpoint?url=https://raw.githubusercontent.com/colehpage/advent-of-code/master/.github/badges/typescript/2019.json)](/typescript/2019/)
-[![2018 TypeScript Progress](https://img.shields.io/endpoint?url=https://raw.githubusercontent.com/colehpage/advent-of-code/master/.github/badges/typescript/2018.json)](/typescript/2018/)
-[![2017 TypeScript Progress](https://img.shields.io/endpoint?url=https://raw.githubusercontent.com/colehpage/advent-of-code/master/.github/badges/typescript/2017.json)](/typescript/2017/)
-[![2016 TypeScript Progress](https://img.shields.io/endpoint?url=https://raw.githubusercontent.com/colehpage/advent-of-code/master/.github/badges/typescript/2016.json)](/typescript/2016/)
-[![2015 TypeScript Progress](https://img.shields.io/endpoint?url=https://raw.githubusercontent.com/colehpage/advent-of-code/master/.github/badges/typescript/2015.json)](/typescript/2015/)
+[![2023 TypeScript Progress](https://img.shields.io/endpoint?url=https://raw.githubusercontent.com/colehpage/advent-of-code/main/.github/badges/typescript/2023.json)](/typescript/2023/)
+[![2022 TypeScript Progress](https://img.shields.io/endpoint?url=https://raw.githubusercontent.com/colehpage/advent-of-code/main/.github/badges/typescript/2022.json)](/typescript/2022/)
+[![2021 TypeScript Progress](https://img.shields.io/endpoint?url=https://raw.githubusercontent.com/colehpage/advent-of-code/main/.github/badges/typescript/2021.json)](/typescript/2021/)
+[![2020 TypeScript Progress](https://img.shields.io/endpoint?url=https://raw.githubusercontent.com/colehpage/advent-of-code/main/.github/badges/typescript/2020.json)](/typescript/2020/)
+[![2019 TypeScript Progress](https://img.shields.io/endpoint?url=https://raw.githubusercontent.com/colehpage/advent-of-code/main/.github/badges/typescript/2019.json)](/typescript/2019/)
+[![2018 TypeScript Progress](https://img.shields.io/endpoint?url=https://raw.githubusercontent.com/colehpage/advent-of-code/main/.github/badges/typescript/2018.json)](/typescript/2018/)
+[![2017 TypeScript Progress](https://img.shields.io/endpoint?url=https://raw.githubusercontent.com/colehpage/advent-of-code/main/.github/badges/typescript/2017.json)](/typescript/2017/)
+[![2016 TypeScript Progress](https://img.shields.io/endpoint?url=https://raw.githubusercontent.com/colehpage/advent-of-code/main/.github/badges/typescript/2016.json)](/typescript/2016/)
+[![2015 TypeScript Progress](https://img.shields.io/endpoint?url=https://raw.githubusercontent.com/colehpage/advent-of-code/main/.github/badges/typescript/2015.json)](/typescript/2015/)
 
 ### Setup TypeScript workspace
 
