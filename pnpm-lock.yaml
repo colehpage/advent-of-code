@@ -163,6 +163,31 @@ importers:
         specifier: ^1.1.0
         version: 1.1.0(@types/node@20.10.5)(jsdom@23.0.1)
 
+  typescript/2023/5:
+    dependencies:
+      jsdom:
+        specifier: ^23.0.1
+        version: 23.0.1
+    devDependencies:
+      '@types/node':
+        specifier: ^20.10.5
+        version: 20.10.5
+      benny:
+        specifier: ^3.7.1
+        version: 3.7.1
+      ts-node:
+        specifier: ^10.9.2
+        version: 10.9.2(@types/node@20.10.5)(typescript@5.3.3)
+      typescript:
+        specifier: ^5.3.3
+        version: 5.3.3
+      vite:
+        specifier: ^5.0.10
+        version: 5.0.10(@types/node@20.10.5)
+      vitest:
+        specifier: ^1.1.0
+        version: 1.1.0(@types/node@20.10.5)(jsdom@23.0.1)
+
 packages:
 
   /@aashutoshrathi/word-wrap@1.2.6:
