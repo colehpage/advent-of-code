@@ -1,6 +1,6 @@
 import { task } from '../../../lib/src/platform';
 
-export const p2 = (input: string) => {
+export const p2 = (input: string): number => {
 	const lines = input.split('\n');
 
 	lines.forEach((line) => {
