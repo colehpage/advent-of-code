@@ -37,7 +37,7 @@ const getEmptyCols = (universe: string[][]): number[] => {
 	return emptyCols;
 };
 
-export const getGalaxies = (universe: string[][]): Galaxy[] => {
+export const getGalaxies = (universe: string[][], expansion: number = 2): Galaxy[] => {
 	const galaxies: Galaxy[] = [];
 	const emptyRows = getEmptyRows(universe);
 	const emptyCols = getEmptyCols(universe);
@@ -47,12 +47,12 @@ export const getGalaxies = (universe: string[][]): Galaxy[] => {
 
 	universe.forEach((row, index) => {
 		if (emptyRows.includes(index)) {
-			currRow += 2;
+			currRow += expansion;
 			return;
 		}
 		row.forEach((col, index) => {
 			if (emptyCols.includes(index)) {
-				currCol += 2;
+				currCol += expansion;
 				return;
 			}
 			if (col === '#') {
