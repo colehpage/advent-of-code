@@ -1,0 +1,12 @@
+package-lock.json
+node_modules
+vite.config.ts._
+vitest.config.ts._
+shims
+typedoc
+
+# sveltekit
+
+.svelte-kit
+.vercel
+build
