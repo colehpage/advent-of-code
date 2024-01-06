@@ -50,15 +50,9 @@ pnpm install
 ### Running individual TypeScript solutions
 
 ```sh
-# Navigate to the solution
-cd typescript/2023/1
 pnpm p1
 pnpm p2
 ```
-
-### Debugging TypeScript solutions using VS Code
-
-Open the solutions file, then run the `[TS] Current File` debug profile.
 
 ### Testing all TypeScript solutions
 
@@ -104,10 +98,79 @@ pnpm lint:format
 
 ## [Rust](./rust)
 
-<!-- TODO -->
+[![2023 Rust Progress](https://img.shields.io/endpoint?url=https://raw.githubusercontent.com/colehpage/advent-of-code/main/.github/badges/rust/2023.json)](/rust/2023/)
+[![2022 Rust Progress](https://img.shields.io/endpoint?url=https://raw.githubusercontent.com/colehpage/advent-of-code/main/.github/badges/rust/2022.json)](/rust/2022/)
+[![2021 Rust Progress](https://img.shields.io/endpoint?url=https://raw.githubusercontent.com/colehpage/advent-of-code/main/.github/badges/rust/2021.json)](/rust/2021/)
+[![2020 Rust Progress](https://img.shields.io/endpoint?url=https://raw.githubusercontent.com/colehpage/advent-of-code/main/.github/badges/rust/2020.json)](/rust/2020/)
+[![2019 Rust Progress](https://img.shields.io/endpoint?url=https://raw.githubusercontent.com/colehpage/advent-of-code/main/.github/badges/rust/2019.json)](/rust/2019/)
+[![2018 Rust Progress](https://img.shields.io/endpoint?url=https://raw.githubusercontent.com/colehpage/advent-of-code/main/.github/badges/rust/2018.json)](/rust/2018/)
+[![2017 Rust Progress](https://img.shields.io/endpoint?url=https://raw.githubusercontent.com/colehpage/advent-of-code/main/.github/badges/rust/2017.json)](/rust/2017/)
+[![2016 Rust Progress](https://img.shields.io/endpoint?url=https://raw.githubusercontent.com/colehpage/advent-of-code/main/.github/badges/rust/2016.json)](/rust/2016/)
+[![2015 Rust Progress](https://img.shields.io/endpoint?url=https://raw.githubusercontent.com/colehpage/advent-of-code/main/.github/badges/rust/2015.json)](/rust/2015/)
 
-## Credit(s)
+### Setup Rust workspace
 
-[Advent of Code](https://adventofcode.com/) was created by [Eric Wastl](http://was.tl/) and has been running since 2015.
+```sh
+rustup default nightly
+# FlameGraph only if stack trace visualization is desired
+# I'm not using right now, but might later
+cargo install cargo-nextest cargo-generate flamegraph
+```
 
-Thanks to [teivah](https://github.com/teivah/advent-of-code) for the idea to use a [justfile](justfile) ([casey/just](https://github.com/casey/just)) plus templates. The justfile is a bit modified and may be updated further at a later date to suit my purposes.
+[FlameGraph Info](https://github.com/brendangregg/FlameGraph?tab=readme-ov-file)
+
+
+### Running individual Rust solutions
+
+```sh
+cargo run --bin p1
+cargo run --bin p2
+```
+
+### Testing
+
+We are using [cargo-nextest][cargo-nextest] here.
+
+#### Testing individual parts
+
+```sh
+cargo nextest run -p d1 p1
+```
+
+#### Running full tests
+
+```sh
+cargo nextest run
+```
+
+### Benchmarking
+
+We are using [Divan][divan] here.
+
+#### Running benchmark for individual parts
+
+```sh
+cargo bench --bench d1-bench p1
+```
+
+#### Running all benchmarks
+
+```sh
+cargo bench -q > benchmarks.txt
+```
+
+## Credits
+
+For the whole purpose we are here, thanks to [Eric Wastl](http://was.tl/) who created [Advent of Code](https://adventofcode.com/) which has been running since 2015 and always brings some serious coding holiday cheer to the end of the year.
+
+### Just
+
+Thanks to [teivah](https://github.com/teivah/advent-of-code) for the idea to use a [justfile](justfile) ([casey/just](https://github.com/casey/just)) and to kickstart my templating system.
+
+### Rust
+
+Thanks to [ChristopherBiscardi](https://github.com/ChristopherBiscardi/advent-of-code) for the introduction to Rust and the Rust templating/testing/benchmarking ideas.
+
+### TypeScript
+
+Thanks to [AlexAegis](https://github.com/AlexAegis/advent-of-code) for some inspiration in fleshing out my TypeScript workflow as well as some general repo goodies.

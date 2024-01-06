@@ -1,13 +1,17 @@
 import { task } from '../../../lib/src/platform';
+import { getLoop, getStart, getTiles, parseLines } from './utils';
 
 export const p2 = (input: string): number => {
 	const lines = input.split('\n');
 
-	lines.forEach((line) => {
-		console.log(line);
-	});
-
-	return 42;
+	const parsedLines = parseLines(lines);
+	const start = getStart(parsedLines);
+	if (!start) {
+		throw new Error('start not found');
+	}
+	const tiles = getTiles(parsedLines);
+	const loop = getLoop(tiles, start);
+	return loop.length / 2;
 };
 
 await task(p2, {
