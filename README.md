@@ -129,7 +129,7 @@ cargo run --bin p2
 
 ### Testing
 
-We are using [cargo-nextest][cargo-nextest] here.
+We are using [cargo-nextest](https://github.com/nextest-rs/nextest) here.
 
 #### Testing individual parts
 
@@ -145,7 +145,7 @@ cargo nextest run
 
 ### Benchmarking
 
-We are using [Divan][divan] here.
+We are using [Divan](https://github.com/nvzqz/divan) here.
 
 #### Running benchmark for individual parts
 
