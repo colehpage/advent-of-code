@@ -2,19 +2,32 @@ from builtins import print
 from builtins import str
 
 
-def p1(input: str):
-  lines = input.splitlines()
-
-  for line in lines:
-    print(line)
-
-  return 42
+def main():
+    print(p1())
+    print(p2())
 
 
-def p2(input: str):
-  lines = input.splitlines()
+def p1():
+    lines = parse_input_file()
+    for line in lines:
+        print(line)
 
-  for line in lines:
-    print(line)
+    return 42
 
-  return 42
+
+def p2():
+    lines = parse_input_file()
+    for line in lines:
+        print(line)
+
+    return 42
+
+
+def parse_input_file():
+    with open('input.txt', 'r') as f:
+        lines = f.read().split("\n")
+    return lines
+
+
+if __name__ == "__main__":
+    main()

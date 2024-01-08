@@ -25,6 +25,16 @@ which will kick off a day in any language and create appropriate directories if 
 
 ## [Go](./go)
 
+[![2023 Go Progress](https://img.shields.io/endpoint?url=https://raw.githubusercontent.com/colehpage/advent-of-code/main/.github/badges/go/2023.json)](/go/2023/)
+[![2022 Go Progress](https://img.shields.io/endpoint?url=https://raw.githubusercontent.com/colehpage/advent-of-code/main/.github/badges/go/2022.json)](/go/2022/)
+[![2021 Go Progress](https://img.shields.io/endpoint?url=https://raw.githubusercontent.com/colehpage/advent-of-code/main/.github/badges/go/2021.json)](/go/2021/)
+[![2020 Go Progress](https://img.shields.io/endpoint?url=https://raw.githubusercontent.com/colehpage/advent-of-code/main/.github/badges/go/2020.json)](/go/2020/)
+[![2019 Go Progress](https://img.shields.io/endpoint?url=https://raw.githubusercontent.com/colehpage/advent-of-code/main/.github/badges/go/2019.json)](/go/2019/)
+[![2018 Go Progress](https://img.shields.io/endpoint?url=https://raw.githubusercontent.com/colehpage/advent-of-code/main/.github/badges/go/2018.json)](/go/2018/)
+[![2017 Go Progress](https://img.shields.io/endpoint?url=https://raw.githubusercontent.com/colehpage/advent-of-code/main/.github/badges/go/2017.json)](/go/2017/)
+[![2016 Go Progress](https://img.shields.io/endpoint?url=https://raw.githubusercontent.com/colehpage/advent-of-code/main/.github/badges/go/2016.json)](/go/2016/)
+[![2015 Go Progress](https://img.shields.io/endpoint?url=https://raw.githubusercontent.com/colehpage/advent-of-code/main/.github/badges/go/2015.json)](/go/2015/)
+
 <!-- TODO -->
 
 ## [Typescript](./ts)
@@ -93,6 +103,16 @@ pnpm lint:format
 ```
 
 ## [Python](./python)
+
+[![2023 Python Progress](https://img.shields.io/endpoint?url=https://raw.githubusercontent.com/colehpage/advent-of-code/main/.github/badges/python/2023.json)](/python/2023/)
+[![2022 Python Progress](https://img.shields.io/endpoint?url=https://raw.githubusercontent.com/colehpage/advent-of-code/main/.github/badges/python/2022.json)](/python/2022/)
+[![2021 Python Progress](https://img.shields.io/endpoint?url=https://raw.githubusercontent.com/colehpage/advent-of-code/main/.github/badges/python/2021.json)](/python/2021/)
+[![2020 Python Progress](https://img.shields.io/endpoint?url=https://raw.githubusercontent.com/colehpage/advent-of-code/main/.github/badges/python/2020.json)](/python/2020/)
+[![2019 Python Progress](https://img.shields.io/endpoint?url=https://raw.githubusercontent.com/colehpage/advent-of-code/main/.github/badges/python/2019.json)](/python/2019/)
+[![2018 Python Progress](https://img.shields.io/endpoint?url=https://raw.githubusercontent.com/colehpage/advent-of-code/main/.github/badges/python/2018.json)](/python/2018/)
+[![2017 Python Progress](https://img.shields.io/endpoint?url=https://raw.githubusercontent.com/colehpage/advent-of-code/main/.github/badges/python/2017.json)](/python/2017/)
+[![2016 Python Progress](https://img.shields.io/endpoint?url=https://raw.githubusercontent.com/colehpage/advent-of-code/main/.github/badges/python/2016.json)](/python/2016/)
+[![2015 Python Progress](https://img.shields.io/endpoint?url=https://raw.githubusercontent.com/colehpage/advent-of-code/main/.github/badges/python/2015.json)](/python/2015/)
 
 <!-- TODO -->
 
