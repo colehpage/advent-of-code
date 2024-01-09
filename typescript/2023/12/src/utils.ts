@@ -1,3 +1,5 @@
+import { memoize } from '../../../lib/src/functions';
+
 export const parseLines = (lines: string[]): { springs: string[][]; counts: number[][] } => {
 	const springs: string[][] = [];
 	const counts: number[][] = [];
@@ -23,23 +25,6 @@ export const parseLinesP2 = (lines: string[]): { springs: string[][]; counts: nu
 
 	return { springs, counts: countsUnfolded };
 };
-
-export function memoize<TArgs extends unknown[], TResult>(fn: Function): Function {
-	const cache = new Map<string, TResult>();
-
-	return (...args: TArgs) => {
-		const cacheKey = JSON.stringify(args);
-
-		if (cache.has(cacheKey)) {
-			return cache.get(cacheKey);
-		}
-
-		const result = fn(...args);
-		cache.set(cacheKey, result);
-
-		return result;
-	};
-}
 
 // recursion or dp - going with recursion here...
 export const getArrangements = memoize((springs: string[], counts: number[]): number => {
