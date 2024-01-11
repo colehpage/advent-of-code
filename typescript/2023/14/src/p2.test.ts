@@ -6,7 +6,7 @@ describe('2023 14 p2', () => {
 	describe('the input', () => {
 		it('should solve the input', async () => {
 			const { input } = await loadTaskResources({ year: 2023, day: 14, part: 2 });
-			expect(p2(input)).toEqual(0);
+			expect(p2(input)).toEqual(93742);
 		});
 	});
 });

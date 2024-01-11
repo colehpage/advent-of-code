@@ -301,3 +301,6 @@ dmypy.json
 
 # Cython debug symbols
 cython_debug/
+
+# REMOVE AOC INPUTS
+input.txt*

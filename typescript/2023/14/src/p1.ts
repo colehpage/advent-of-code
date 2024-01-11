@@ -1,10 +1,10 @@
 import { task } from '../../../lib/src/platform';
-import { load, rotate, tilt } from './utils';
+import { load, tilt, transpose } from './utils';
 
 export const p1 = (input: string): number => {
 	const lines = input.split('\n');
 
-	return rotate(lines)
+	return transpose(lines)
 		.map(tilt)
 		.map(load)
 		.reduce((acc, curr) => acc + curr, 0);
