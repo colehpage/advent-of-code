@@ -18,9 +18,9 @@ func main() {
 
 func p1(input []string) int {
 	log.Println(input)
-	return 42
+	return 33
 }
 
 func p2(input []string) int {
-	return 42
+	return 33
 }

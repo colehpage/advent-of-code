@@ -6,7 +6,11 @@ gen LANGUAGE YEAR DAY:
     else
         mkdir -p {{LANGUAGE}}/{{YEAR}}/{{DAY}}
         cp -R templates/{{LANGUAGE}}/ {{LANGUAGE}}/{{YEAR}}/{{DAY}}
-        curl --cookie "session=$ADVENT_OF_CODE_COOKIE" https://adventofcode.com/{{YEAR}}/day/{{DAY}}/input -o {{LANGUAGE}}/{{YEAR}}/{{DAY}}/input.txt
+        curl --cookie "session=$AOC_SESSION" https://adventofcode.com/{{YEAR}}/day/{{DAY}}/input -o {{LANGUAGE}}/{{YEAR}}/{{DAY}}/input.txt
+        curl --cookie "session=$AOC_SESSION" https://adventofcode.com/{{YEAR}}/day/{{DAY}} | pup 'article.day-desc' > {{LANGUAGE}}/{{YEAR}}/{{DAY}}/tmp.html
+        html-to-markdown {{LANGUAGE}}/{{YEAR}}/{{DAY}}/tmp.html -o {{LANGUAGE}}/{{YEAR}}/{{DAY}}
+        mv {{LANGUAGE}}/{{YEAR}}/{{DAY}}/tmp.html.md {{LANGUAGE}}/{{YEAR}}/{{DAY}}/README.md
+        rm {{LANGUAGE}}/{{YEAR}}/{{DAY}}/tmp.html
         perl -i -pe 'chomp if eof' {{LANGUAGE}}/{{YEAR}}/{{DAY}}/input.txt
     fi
     
@@ -18,7 +22,11 @@ gen LANGUAGE YEAR DAY:
         cd {{LANGUAGE}}/{{YEAR}}
         cargo generate --path ../../templates/rust --name d{{DAY}}
         cd d{{DAY}}
-        curl --cookie "session=$ADVENT_OF_CODE_COOKIE" https://adventofcode.com/{{YEAR}}/day/{{DAY}}/input -o input.txt
+        curl --cookie "session=$AOC_SESSION" https://adventofcode.com/{{YEAR}}/day/{{DAY}}/input -o input.txt
+        curl --cookie "session=$AOC_SESSION" https://adventofcode.com/{{YEAR}}/day/{{DAY}} | pup 'article.day-desc' > tmp.html
+        html-to-markdown tmp.html -o .
+        mv tmp.html.md README.md
+        rm tmp.html
         perl -i -pe 'chomp if eof' input.txt
         cd ../../..
     fi

@@ -7,12 +7,12 @@ import (
 	"github.com/stretchr/testify/assert"
 )
 
-func TestP1Input(t *testing.T) {
+func TestP1(t *testing.T) {
 	input := util.ReadInput("input.txt")
 	assert.Equal(t, 54990, p1(input))
 }
 
-func TestP2Input(t *testing.T) {
+func TestP2(t *testing.T) {
 	input := util.ReadInput("input.txt")
 	assert.Equal(t, 54473, p2(input))
 }
