@@ -1,26 +1,26 @@
 package main
 
 import (
-	"bufio"
-	"io"
+	"log"
+
+	"github.com/colehpage/aoc/go/util"
 )
 
-func p1(input io.Reader) int {
-	scanner := bufio.NewScanner(input)
-	for scanner.Scan() {
-		line := scanner.Text()
-		_ = line
-	}
+func main() {
+	input := util.ReadInput("test.txt")
+	util.TimeOutput("p1", func() int {
+		return p1(input)
+	})
+	util.TimeOutput("p2", func() int {
+		return p2(input)
+	})
+}
 
+func p1(input []string) int {
+	log.Println(input)
 	return 42
 }
 
-func p2(input io.Reader) int {
-	scanner := bufio.NewScanner(input)
-	for scanner.Scan() {
-		line := scanner.Text()
-		_ = line
-	}
-
+func p2(input []string) int {
 	return 42
 }

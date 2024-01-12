@@ -11,17 +11,7 @@ gen LANGUAGE YEAR DAY:
     fi
     
     if [ "{{LANGUAGE}}" = "go" ]; then
-        cd {{LANGUAGE}}/{{YEAR}}/{{DAY}}
-        go mod init day{{YEAR}}-{{DAY}}
-        go mod tidy
-        go get github.com/stretchr/testify
-        go get golang.org/x/exp
-
-        # Temporary workaround as the Go version is generated with 3 digits for some reason
-        sed -i -e 's/go 1.21.4/go 1.21/' go.mod
-        rm go.mod-e
-
-        cd ../../..
+        echo "TODO"
     fi
 
     if [ "{{LANGUAGE}}" = "rust" ]; then
