@@ -8,11 +8,11 @@ import (
 )
 
 func TestP1Input(t *testing.T) {
-	input := util.ReadInput("test.txt")
+	input := util.ReadInput("input.txt")
 	assert.Equal(t, 54990, p1(input))
 }
 
 func TestP2Input(t *testing.T) {
-	input := util.ReadInput("test.txt")
+	input := util.ReadInput("input.txt")
 	assert.Equal(t, 54473, p2(input))
 }
