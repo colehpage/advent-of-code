@@ -10,8 +10,14 @@ gen LANGUAGE YEAR DAY:
         curl --cookie "session=$AOC_SESSION" https://adventofcode.com/{{YEAR}}/day/{{DAY}} | pup 'article.day-desc' > {{LANGUAGE}}/{{YEAR}}/{{DAY}}/tmp.html
         html-to-markdown {{LANGUAGE}}/{{YEAR}}/{{DAY}}/tmp.html -o {{LANGUAGE}}/{{YEAR}}/{{DAY}}
         mv {{LANGUAGE}}/{{YEAR}}/{{DAY}}/tmp.html.md {{LANGUAGE}}/{{YEAR}}/{{DAY}}/README.md
+        awk '/^```/{print; flag=!flag; next} flag{if (/^[ \t]*$/) next; sub(/^[ \t]+/, ""); print; next} 1' {{LANGUAGE}}/{{YEAR}}/{{DAY}}/README.md > {{LANGUAGE}}/{{YEAR}}/{{DAY}}/tmp.md && mv {{LANGUAGE}}/{{YEAR}}/{{DAY}}/tmp.md {{LANGUAGE}}/{{YEAR}}/{{DAY}}/README.md
+        
+        # "this is hacky and won't always work - most are 'For example:' before the test cases, but they can be different so you'll have to check and manually import in some cases"
+        awk '/example/ {example=1} /^```/ && example==1 && !flag {flag=1; next} /^```/ && flag {flag=0; exit} flag {print}' {{LANGUAGE}}/{{YEAR}}/{{DAY}}/README.md > {{LANGUAGE}}/{{YEAR}}/{{DAY}}/test.txt
+        
         rm {{LANGUAGE}}/{{YEAR}}/{{DAY}}/tmp.html
         perl -i -pe 'chomp if eof' {{LANGUAGE}}/{{YEAR}}/{{DAY}}/input.txt
+        perl -i -pe 'chomp if eof' {{LANGUAGE}}/{{YEAR}}/{{DAY}}/test.txt
     fi
     
     if [ "{{LANGUAGE}}" = "go" ]; then
@@ -26,8 +32,14 @@ gen LANGUAGE YEAR DAY:
         curl --cookie "session=$AOC_SESSION" https://adventofcode.com/{{YEAR}}/day/{{DAY}} | pup 'article.day-desc' > tmp.html
         html-to-markdown tmp.html -o .
         mv tmp.html.md README.md
+        awk '/^```/{print; flag=!flag; next} flag{if (/^[ \t]*$/) next; sub(/^[ \t]+/, ""); print; next} 1' README.md > tmp.md && mv tmp.md README.md
+        
+        # "this is hacky and won't always work - most are 'For example:' before the test cases, but they can be different so you'll have to check and manually import in some cases"
+        awk '/example/ {example=1} /^```/ && example==1 && !flag {flag=1; next} /^```/ && flag {flag=0; exit} flag {print}' README.md > test.txt
+        
         rm tmp.html
         perl -i -pe 'chomp if eof' input.txt
+        perl -i -pe 'chomp if eof' test.txt
         cd ../../..
     fi
 
