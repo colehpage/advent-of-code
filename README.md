@@ -35,6 +35,14 @@ which will kick off a day in any language and create appropriate directories if 
 [![2016 Go Progress](https://img.shields.io/endpoint?url=https://raw.githubusercontent.com/colehpage/advent-of-code/main/.github/badges/go/2016.json)](/go/2016/)
 [![2015 Go Progress](https://img.shields.io/endpoint?url=https://raw.githubusercontent.com/colehpage/advent-of-code/main/.github/badges/go/2015.json)](/go/2015/)
 
+### Running go solutions
+
+In any go assignment day directory:
+
+```sh
+go run main.go
+```
+
 <!-- TODO -->
 
 ## [Typescript](./ts)
