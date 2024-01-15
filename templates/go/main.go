@@ -3,24 +3,26 @@ package main
 import (
 	"log"
 
-	"github.com/colehpage/aoc/go/util"
+	aoc "github.com/colehpage/aoc/go/lib"
 )
 
 func main() {
-	input := util.ReadInput("test.txt")
-	util.TimeOutput("p1", func() int {
-		return p1(input)
+	rows := aoc.ReadInput("test.txt")
+	aoc.TimeOutput("p1", func() int {
+		return p1(rows)
 	})
-	util.TimeOutput("p2", func() int {
-		return p2(input)
+	aoc.TimeOutput("p2", func() int {
+		return p2(rows)
 	})
 }
 
-func p1(input []string) int {
-	log.Println(input)
+func p1(rows []string) int {
+	for _, row := range rows {
+		log.Println(row)
+	}
 	return 33
 }
 
-func p2(input []string) int {
+func p2(rows []string) int {
 	return 33
 }

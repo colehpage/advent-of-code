@@ -4,15 +4,15 @@ import (
 	"fmt"
 	"strings"
 
-	"github.com/colehpage/aoc/go/util"
+	aoc "github.com/colehpage/aoc/go/lib"
 )
 
 func main() {
-	input := util.ReadInput("input.txt")
-	util.TimeOutput("p1", func() int {
+	input := aoc.ReadInput("input.txt")
+	aoc.TimeOutput("p1", func() int {
 		return p1(input)
 	})
-	util.TimeOutput("p2", func() int {
+	aoc.TimeOutput("p2", func() int {
 		return p2(input)
 	})
 }

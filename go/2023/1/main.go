@@ -4,17 +4,17 @@ import (
 	"log"
 	"strings"
 
-	"github.com/colehpage/aoc/go/util"
+	aoc "github.com/colehpage/aoc/go/lib"
 )
 
 var digits = []string{"one", "two", "three", "four", "five", "six", "seven", "eight", "nine"}
 
 func main() {
-	input := util.ReadInput("input.txt")
-	util.TimeOutput("p1", func() int {
+	input := aoc.ReadInput("input.txt")
+	aoc.TimeOutput("p1", func() int {
 		return p1(input)
 	})
-	util.TimeOutput("p2", func() int {
+	aoc.TimeOutput("p2", func() int {
 		return p2(input)
 	})
 }
@@ -30,7 +30,8 @@ func p1(input []string) int {
 func p2(input []string) int {
 	sum := 0
 	for _, line := range input {
-		sum += firstNumber(line)*10 + lastNumber(line)	}
+		sum += firstNumber(line)*10 + lastNumber(line)
+	}
 	return sum
 }
 
