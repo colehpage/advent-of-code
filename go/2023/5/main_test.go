@@ -8,11 +8,11 @@ import (
 )
 
 func TestP1(t *testing.T) {
-	input := aoc.ReadInput("input.txt")
-	assert.Equal(t, 33, p1(input))
+	input := aoc.ReadFile("input.txt")
+	assert.Equal(t, 196167384, p1(input))
 }
 
 func TestP2(t *testing.T) {
-	input := aoc.ReadInput("input.txt")
-	assert.Equal(t, 33, p2(input))
+	input := aoc.ReadFile("input.txt")
+	assert.Equal(t, 125742456, p2(input))
 }
