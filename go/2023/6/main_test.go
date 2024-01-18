@@ -14,5 +14,5 @@ func TestP1(t *testing.T) {
 
 func TestP2(t *testing.T) {
 	input := aoc.ReadFile("input.txt")
-	assert.Equal(t, 33, p2(input))
+	assert.Equal(t, 38220708, p2(input))
 }

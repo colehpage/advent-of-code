@@ -50,7 +50,14 @@ func p1(input io.Reader) int {
 }
 
 func p2(input io.Reader) int {
-	return 33
+	lines := aoc.ReaderToStrings(input)
+	times := strings.TrimSpace(strings.TrimPrefix(lines[0], "Time: "))
+	dists := strings.TrimSpace(strings.TrimPrefix(lines[1], "Distance: "))
+
+	time := aoc.StringToInt(strings.ReplaceAll(times, " ", ""))
+	dist := aoc.StringToInt(strings.ReplaceAll(dists, " ", ""))
+
+	return calcNumWins(time, dist)
 }
 
 type Race struct {
